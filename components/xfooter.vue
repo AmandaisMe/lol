@@ -2,7 +2,7 @@
 <mu-paper style='position:fixed;bottom:0px;width:100%'>
   <mu-bottom-nav :value="bottomNav" @change="handleChange">
     <mu-bottom-nav-item value="recents" href='#/news/1' title="资讯" icon="restore"/>
-    <mu-bottom-nav-item value="flight_takeoff" href='#/search/2' title="搜索" icon="flight_takeoff"/>
+    <mu-bottom-nav-item value="flight_takeoff" href='#/search/2' title='评论' icon="flight_takeoff"/>
     <mu-bottom-nav-item value="favorites" href='#/players/3' title="玩家" icon="favorite"/>
     <mu-bottom-nav-item value="nearby" href='#/voides/4' title="视频" icon="location_on"/>
   </mu-bottom-nav>

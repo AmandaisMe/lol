@@ -57,7 +57,7 @@ export default {
   }
 }
 </script>
-<style lang="css">
+<style scoped >
 .demo-infinite-container{
   width:100%;
  margin-top:56px;
