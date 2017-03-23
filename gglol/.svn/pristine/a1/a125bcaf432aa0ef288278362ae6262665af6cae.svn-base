@@ -20,15 +20,15 @@ Vue.use(VueRouter)
 import Vuex from 'vuex'
 Vue.use(Vuex);
 var store = new Vuex.Store({
-    state: {
-        isbottomPopup: false,
-        isleftPopup: false
+    state:{
+        isbottomPopup:false,
+        isleftPopup:false
     },
-    mutations: {
-        set_open: function(state, data) {
+    mutations:{
+        set_open:function(state,data){
             state.isleftPopup = data
         },
-        set_close: function(state, data) {
+        set_close:function(state,data){
             state.isbottomPopup = data
         }
     }
@@ -48,32 +48,31 @@ var router = new VueRouter({
     routes: [{
         path: '/index',
         component: Index,
-        children: [{
-            path: '/news/:id',
-            component: News
-        }, {
-            path: '/players/:id',
-            component: Player
-
-        }, {
-            path: '/search/:id',
-            component: Search
-        }, {
-            path: '/voides/:id',
-            component: Heros
-        },{
-             path:'/detail/:id',
-                component: Detail
-        }]
-    }, {
-        path: '/',
-        redirect: '/news/1'
-    }]
+            children: [{
+                path: '/news/:id',
+                component: News
+            },{
+            	path:'/players/:id',
+            	component:Player
+            },{
+                path:'/search/:id',
+                component:Search
+            },{
+            	path:'/voides/:id',
+            	component:Heros
+            }]
+    },{
+            path:'/detail/:id',
+            component:Detail
+     },{
+        path:'/',
+        redirect:'/news/1'
+     }]
 })
 
 
 
 new Vue({
     router: router,
-    store: store
+    store:store
 }).$mount('#lol')

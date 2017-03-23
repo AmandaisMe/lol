@@ -24386,15 +24386,15 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */])
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_4_vuex__["a" /* default */]);
 var store = new __WEBPACK_IMPORTED_MODULE_4_vuex__["a" /* default */].Store({
-    state: {
-        isbottomPopup: false,
-        isleftPopup: false
+    state:{
+        isbottomPopup:false,
+        isleftPopup:false
     },
-    mutations: {
-        set_open: function(state, data) {
+    mutations:{
+        set_open:function(state,data){
             state.isleftPopup = data
         },
-        set_close: function(state, data) {
+        set_close:function(state,data){
             state.isbottomPopup = data
         }
     }
@@ -24414,34 +24414,33 @@ var router = new __WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]({
     routes: [{
         path: '/index',
         component: Index,
-        children: [{
-            path: '/news/:id',
-            component: News
-        }, {
-            path: '/players/:id',
-            component: Player
-
-        }, {
-            path: '/search/:id',
-            component: Search
-        }, {
-            path: '/voides/:id',
-            component: Heros
-        },{
-             path:'/detail/:id',
-                component: Detail
-        }]
-    }, {
-        path: '/',
-        redirect: '/news/1'
-    }]
+            children: [{
+                path: '/news/:id',
+                component: News
+            },{
+            	path:'/players/:id',
+            	component:Player
+            },{
+                path:'/search/:id',
+                component:Search
+            },{
+            	path:'/voides/:id',
+            	component:Heros
+            }]
+    },{
+            path:'/detail/:id',
+            component:Detail
+     },{
+        path:'/',
+        redirect:'/news/1'
+     }]
 })
 
 
 
 new Vue({
     router: router,
-    store: store
+    store:store
 }).$mount('#lol')
 
 

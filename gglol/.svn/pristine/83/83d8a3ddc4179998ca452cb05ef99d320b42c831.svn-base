@@ -1,9 +1,9 @@
 <template>
 <div>
-    <!-- <mu-appbar :title="arrs.name">
+    <mu-appbar :title="arrs.name">
         <mu-icon-button icon='menu' slot="left"/>
         <mu-icon-button icon='expand_more' slot="right"/>
-     </mu-appbar> -->
+     </mu-appbar>
 
     <mu-card >
         <mu-card-media :title="arrs.name" >
