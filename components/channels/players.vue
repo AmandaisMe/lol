@@ -40,7 +40,7 @@
 
 <style>
       .gridlist-demo-container{
-        
+        padding:30px;
         margin-top:56px;
         display: flex;
         flex-wrap: wrap;
