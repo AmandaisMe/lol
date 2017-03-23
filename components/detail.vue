@@ -58,7 +58,7 @@ export default {
      
       this.$http.get('http://lolapi.games-cube.com/GetChampionDetail?champion_id='+this.$route.params.id,{
         headers: {
-          "DAIWAN-API-TOKEN":"ECFCE-BFCCF-7D288-8CD8C"
+          "DAIWAN-API-TOKEN":"78710-B0810-777C7-C9A85"
         }
       }).then(function(data){
           console.log(data.data.data[0])
