@@ -4,10 +4,9 @@ var Vue = require('vue');
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 Vue.use(MuseUI)
-
+//vue 跨域$http
 var VueResource = require('vue-resource');
 Vue.use(VueResource);
-
 
 //引入swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -20,16 +19,26 @@ Vue.use(VueRouter)
 import Vuex from 'vuex'
 Vue.use(Vuex);
 var store = new Vuex.Store({
+    //保存
     state: {
         isbottomPopup: false,
-        isleftPopup: false
+        isleftPopup: false,
+        title:'',
+        bool:true
     },
+    //设置 通过mutations设置的值来改变state
     mutations: {
         set_open: function(state, data) {
             state.isleftPopup = data
         },
         set_close: function(state, data) {
             state.isbottomPopup = data
+        },
+        set_title:function(state,data){
+            state.title = data
+        },
+        set_show:function(state,data){
+            state.bool =  data;
         }
     }
 

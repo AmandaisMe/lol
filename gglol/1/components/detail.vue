@@ -63,15 +63,20 @@ export default {
       }).then(function(data){
           console.log(data.data.data[0])
           this.arrs = data.data.data[0]
+          this.title( this.arrs.name);
          
       })
     },
      handleTabChange (val) {
       this.activeTab = val
+    },
+    title:function(a){
+      this.$store.commit('set_title',a);
     }
   },
   mounted:function(){
     this.get_id();
+
   }
 }
 </script>

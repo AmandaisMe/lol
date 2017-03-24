@@ -17,3 +17,15 @@
   </div>
 
 </template>
+<script>
+  module.exports = {
+    methods:{
+      title:function(){
+        this.$store.commit('set_title','视频锦集');
+      }
+    },
+    mounted:function(){
+      this.title();
+    }
+  }
+</script>

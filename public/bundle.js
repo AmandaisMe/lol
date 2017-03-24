@@ -20550,7 +20550,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.gridlist-demo-container{\n  padding:30px;\n  margin-top:56px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:space-between;\n}\n.gridlist-demo{\n  width: 500px;\n  overflow-y: auto;\n}\n#images{\n  width:160px;\n}\n.list{\n  float:left;\n}\n\n", "", {"version":3,"sources":["D:/lolpro/components/channels/players.vue?7b5c6d64"],"names":[],"mappings":";AAyGA;EACA,aAAA;EACA,gBAAA;EACA,cAAA;EACA,gBAAA;EACA,8BAAA;CAEA;AAEA;EACA,aAAA;EACA,iBAAA;CACA;AACA;EACA,YAAA;CACA;AACA;EACA,WAAA;CACA","file":"players.vue","sourcesContent":["<template>\r\n    <div class=\"gridlist-demo-container\">\r\n     <input style='margin-bootom:20px' v-model='search' placeholder =\"请随便输入点啥\" @focus='focus' @keyup=\"change(search)\" @blur='blur'/>\r\n      <mu-grid-list class=\"gridlist-demo\">\r\n        <div class='list' v-for=\"list in lists\" :key='list.id' v-show='bool'> \r\n          <mu-grid-tile style='width:150px' >\r\n              <a :href=\"'#/detail/'+list.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+list.id+'.png'\"/></a>\r\n                <span slot=\"title\">{{list.cname}}</span>\r\n                <span slot=\"subTitle\">by <b>{{list.title}}</b></span>\r\n                <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n          </mu-grid-tile>\r\n        </div>\r\n      </mu-grid-list>\r\n      <mu-grid-list class=\"gridlist-demo\" v-show='sort'>\r\n        <div class='list' > \r\n          <mu-grid-tile style='width:150px'>\r\n              <a :href=\"'#/detail/'+arrs.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+arrs.id+'.png'\"/></a>\r\n                <span slot=\"title\">{{arrs.cname}}</span>\r\n                <span slot=\"subTitle\">by <b>{{arrs.title}}</b></span>\r\n                <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n          </mu-grid-tile>\r\n        </div>\r\n      </mu-grid-list>\r\n\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n      export default {\r\n          data () {\r\n            return {\r\n              search:'',\r\n              lists: [],\r\n              dataSource: [],\r\n              bool:true,\r\n              sort:false,\r\n              arrs :{}\r\n              \r\n            }\r\n          },\r\n          methods:{\r\n            getchampion:function(){\r\n              this.$http.get('http://lolapi.games-cube.com/champion',{\r\n              \r\n                  headers:{\r\n                    \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                }\r\n                  \r\n              }).then(function(data){\r\n                 \r\n                  this.lists = data.data.data;\r\n              })\r\n            },\r\n            title:function(){\r\n              this.$store.commit('set_title',\"英雄列表\")\r\n\r\n                  \r\n            },\r\n            focus:function(){\r\n              this.bool = false;\r\n              this.sort = false\r\n             \r\n            \r\n            },\r\n            blur:function(){\r\n             this.bool = true;\r\n            },\r\n            change (val) {\r\n                \r\n                  var self = this;\r\n                  console.log(`you choose ${val}`)\r\n                   this.$http.get('http://lolapi.games-cube.com/champion',{\r\n                \r\n                    headers:{\r\n                      \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                  }\r\n                   \r\n                }).then(function(data){\r\n                    // console.log(data.data.data)\r\n                    this.lists = data.data.data;\r\n                    this.lists.forEach(function(ele,item){\r\n                       \r\n                    if(val==ele.cname){\r\n                    \r\n                     self.arrs = ele;\r\n                      self.sort=true;\r\n                     \r\n\r\n                      }\r\n                    })\r\n                })\r\n            }\r\n          },\r\n\r\n          mounted:function(){\r\n            this.getchampion();\r\n            this.title();\r\n\r\n            \r\n       \r\n          }\r\n      }\r\n</script>\r\n\r\n<style>\r\n      .gridlist-demo-container{\r\n        padding:30px;\r\n        margin-top:56px;\r\n        display: flex;\r\n        flex-wrap: wrap;\r\n        justify-content:space-between;\r\n\r\n      }\r\n\r\n      .gridlist-demo{\r\n        width: 500px;\r\n        overflow-y: auto;\r\n      }\r\n      #images{\r\n        width:160px;\r\n      }\r\n      .list{\r\n        float:left;\r\n      }\r\n      \r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n.gridlist-demo-container{\n  padding:30px;\n  margin-top:56px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:space-between;\n}\n.gridlist-demo{\n  width: 500px;\n  overflow-y: auto;\n}\n#images{\n  width:160px;\n}\n.list{\n  float:left;\n}\n\n", "", {"version":3,"sources":["D:/lolpro/components/channels/players.vue?33140bd9"],"names":[],"mappings":";AAgHA;EACA,aAAA;EACA,gBAAA;EACA,cAAA;EACA,gBAAA;EACA,8BAAA;CAEA;AAEA;EACA,aAAA;EACA,iBAAA;CACA;AACA;EACA,YAAA;CACA;AACA;EACA,WAAA;CACA","file":"players.vue","sourcesContent":["<template>\r\n    <div class=\"gridlist-demo-container\">\r\n     <input style='margin-bottom:20px' v-model='search' placeholder =\"请随便输入点啥\" @focus='focus' @keyup=\"change(search)\" @blur='blur'/>\r\n      <mu-grid-list class=\"gridlist-demo\">\r\n        <div class='list' v-for=\"list in lists\" :key='list.id' v-show='bool'> \r\n          <mu-grid-tile style='width:150px' >\r\n              <a :href=\"'#/detail/'+list.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+list.id+'.png'\"/></a>\r\n                <span slot=\"title\">{{list.cname}}</span>\r\n                <span slot=\"subTitle\">by <b>{{list.title}}</b></span>\r\n                <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n          </mu-grid-tile>\r\n        </div>\r\n      </mu-grid-list>\r\n      <mu-grid-list class=\"gridlist-demo\"  v-show='sort'>\r\n        <div class='list' > \r\n          <mu-grid-tile style='width:150px' >\r\n              <a :href=\"'#/detail/'+arrs.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+arrs.id+'.png'\"/></a>\r\n                <span slot=\"title\">{{arrs.cname}}</span>\r\n                <span slot=\"subTitle\">by <b>{{arrs.title}}</b></span>\r\n                <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n          </mu-grid-tile>\r\n        </div>\r\n      </mu-grid-list>\r\n\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n      export default {\r\n          data () {\r\n            return {\r\n              search:'',\r\n              lists: [],\r\n              dataSource: [],\r\n              bool:true,\r\n              sort:false,\r\n              arrs :{}\r\n              \r\n            }\r\n          },\r\n          methods:{\r\n            getchampion:function(){\r\n              this.$http.get('http://lolapi.games-cube.com/champion',{\r\n              \r\n                  headers:{\r\n                    \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                }\r\n                  \r\n              }).then(function(data){\r\n                  console.log(data.data.data)\r\n                  this.lists = data.data.data;\r\n              })\r\n            },\r\n            title:function(){\r\n              this.$store.commit('set_title',\"英雄列表\")\r\n\r\n                  \r\n            },\r\n            focus:function(){\r\n              this.bool = false;\r\n              this.sort = false\r\n              console.log(1)\r\n              console.log(this.bool)\r\n            \r\n            },\r\n            blur:function(){\r\n             \r\n             if(this.search == ''){\r\n                this.bool = true;\r\n             }\r\n            },\r\n            change (val) {\r\n                  console.log(this)\r\n                  var self = this;\r\n                  console.log(`you choose ${val}`)\r\n                   this.$http.get('http://lolapi.games-cube.com/champion',{\r\n                \r\n                    headers:{\r\n                      \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                  }\r\n                   \r\n                }).then(function(data){\r\n                    // console.log(data.data.data)\r\n                    this.lists = data.data.data;\r\n                    this.lists.forEach(function(ele,item){\r\n                       \r\n                    if(val==ele.cname){\r\n                      console.log(1)\r\n                      console.log(ele)\r\n                       self.sort=true;\r\n                     self.arrs = ele;\r\n                     \r\n                      console.log(self.arrs)\r\n                      // console.log(arrs.id)\r\n\r\n                      }\r\n                    })\r\n                })\r\n            }\r\n          },\r\n\r\n          mounted:function(){\r\n            this.getchampion();\r\n            this.title();\r\n\r\n            \r\n       \r\n          }\r\n      }\r\n</script>\r\n\r\n<style>\r\n      .gridlist-demo-container{\r\n        padding:30px;\r\n        margin-top:56px;\r\n        display: flex;\r\n        flex-wrap: wrap;\r\n        justify-content:space-between;\r\n\r\n      }\r\n\r\n      .gridlist-demo{\r\n        width: 500px;\r\n        overflow-y: auto;\r\n      }\r\n      #images{\r\n        width:160px;\r\n      }\r\n      .list{\r\n        float:left;\r\n      }\r\n      \r\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -21152,7 +21152,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           }
             
         }).then(function(data){
-           
+            console.log(data.data.data)
             this.lists = data.data.data;
         })
       },
@@ -21164,14 +21164,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       focus:function(){
         this.bool = false;
         this.sort = false
-       
+        console.log(1)
+        console.log(this.bool)
       
       },
       blur:function(){
-       this.bool = true;
+       
+       if(this.search == ''){
+          this.bool = true;
+       }
       },
       change (val) {
-          
+            console.log(this)
             var self = this;
             console.log(`you choose ${val}`)
              this.$http.get('http://lolapi.games-cube.com/champion',{
@@ -21186,10 +21190,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
               this.lists.forEach(function(ele,item){
                  
               if(val==ele.cname){
-              
+                console.log(1)
+                console.log(ele)
+                 self.sort=true;
                self.arrs = ele;
-                self.sort=true;
                
+                console.log(self.arrs)
+                // console.log(arrs.id)
 
                 }
               })
@@ -21990,7 +21997,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       expression: "search"
     }],
     staticStyle: {
-      "margin-bootom": "20px"
+      "margin-bottom": "20px"
     },
     attrs: {
       "placeholder": "请随便输入点啥"

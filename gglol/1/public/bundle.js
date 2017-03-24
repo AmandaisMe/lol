@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 75);
+/******/ 	return __webpack_require__(__webpack_require__.s = 76);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -200,7 +200,7 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(73).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(74).Buffer))
 
 /***/ }),
 /* 2 */
@@ -222,7 +222,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(72)
+var listToStyles = __webpack_require__(73)
 
 /*
 type StyleObject = {
@@ -9975,9 +9975,9 @@ function updateLink(linkElement, obj) {
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(46),
+  __webpack_require__(47),
   /* template */
-  __webpack_require__(53),
+  __webpack_require__(54),
   /* scopeId */
   null,
   /* cssModules */
@@ -16498,7 +16498,7 @@ var xhrClient = function (request) {
 
 var nodeClient = function (request) {
 
-    var client = __webpack_require__(74);
+    var client = __webpack_require__(75);
 
     return new PromiseObj(function (resolve) {
 
@@ -16957,13 +16957,13 @@ module.exports = plugin;
 
 
 /* styles */
-__webpack_require__(65)
+__webpack_require__(66)
 
 var Component = __webpack_require__(0)(
   /* script */
   __webpack_require__(40),
   /* template */
-  __webpack_require__(54),
+  __webpack_require__(55),
   /* scopeId */
   null,
   /* cssModules */
@@ -16995,13 +16995,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(66)
+__webpack_require__(67)
 
 var Component = __webpack_require__(0)(
   /* script */
   __webpack_require__(41),
   /* template */
-  __webpack_require__(56),
+  __webpack_require__(57),
   /* scopeId */
   null,
   /* cssModules */
@@ -17033,13 +17033,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(71)
+__webpack_require__(72)
 
 var Component = __webpack_require__(0)(
   /* script */
   __webpack_require__(42),
   /* template */
-  __webpack_require__(64),
+  __webpack_require__(65),
   /* scopeId */
   "data-v-f77fec4a",
   /* cssModules */
@@ -17071,9 +17071,9 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(0)(
   /* script */
-  null,
+  __webpack_require__(43),
   /* template */
-  __webpack_require__(62),
+  __webpack_require__(63),
   /* scopeId */
   null,
   /* cssModules */
@@ -17105,13 +17105,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(70)
+__webpack_require__(71)
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(43),
+  __webpack_require__(44),
   /* template */
-  __webpack_require__(63),
+  __webpack_require__(64),
   /* scopeId */
   null,
   /* cssModules */
@@ -17143,9 +17143,9 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(44),
+  __webpack_require__(45),
   /* template */
-  __webpack_require__(61),
+  __webpack_require__(62),
   /* scopeId */
   null,
   /* cssModules */
@@ -20536,7 +20536,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"news.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"news.vue","sourceRoot":""}]);
 
 // exports
 
@@ -20550,7 +20550,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.gridlist-demo-container{\n  padding:30px;\n  margin-top:56px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:space-between;\n}\n.gridlist-demo{\n  width: 500px;\n  overflow-y: auto;\n}\n#images{\n  width:160px;\n}\n\n", "", {"version":3,"sources":["D:/lolpro/components/channels/players.vue?13efd8d3"],"names":[],"mappings":";AAyCA;EACA,aAAA;EACA,gBAAA;EACA,cAAA;EACA,gBAAA;EACA,8BAAA;CAEA;AAEA;EACA,aAAA;EACA,iBAAA;CACA;AACA;EACA,YAAA;CACA","file":"players.vue","sourcesContent":["<template>\r\n    <div class=\"gridlist-demo-container\">\r\n      <mu-grid-list class=\"gridlist-demo\">\r\n        <mu-grid-tile v-for=\"list in lists\" :key='list.id'>\r\n        <a :href=\"'#/detail/'+list.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+list.id+'.png'\"/></a>\r\n          <span slot=\"title\">{{list.cname}}</span>\r\n          <span slot=\"subTitle\">by <b>{{list.title}}</b></span>\r\n          <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n        </mu-grid-tile>\r\n      </mu-grid-list>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n      export default {\r\n          data () {\r\n            return {\r\n              lists: []\r\n            }\r\n          },\r\n          methods:{\r\n            getchampion:function(){\r\n              this.$http.get('http://lolapi.games-cube.com/champion',{\r\n              \r\n                  headers:{\r\n                    \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                }\r\n                  \r\n              }).then(function(data){\r\n                  console.log(data.data.data)\r\n                  this.lists = data.data.data;\r\n              })\r\n            }\r\n          },\r\n          mounted:function(){\r\n            this.getchampion();\r\n          }\r\n      }\r\n</script>\r\n\r\n<style>\r\n      .gridlist-demo-container{\r\n        padding:30px;\r\n        margin-top:56px;\r\n        display: flex;\r\n        flex-wrap: wrap;\r\n        justify-content:space-between;\r\n\r\n      }\r\n\r\n      .gridlist-demo{\r\n        width: 500px;\r\n        overflow-y: auto;\r\n      }\r\n      #images{\r\n        width:160px;\r\n      }\r\n      \r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n.gridlist-demo-container{\n  padding:30px;\n  margin-top:56px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:space-between;\n}\n.gridlist-demo{\n  width: 500px;\n  overflow-y: auto;\n}\n#images{\n  width:160px;\n}\n.list{\n  float:left;\n}\n\n", "", {"version":3,"sources":["D:/lolpro/components/channels/players.vue?7b5c6d64"],"names":[],"mappings":";AAyGA;EACA,aAAA;EACA,gBAAA;EACA,cAAA;EACA,gBAAA;EACA,8BAAA;CAEA;AAEA;EACA,aAAA;EACA,iBAAA;CACA;AACA;EACA,YAAA;CACA;AACA;EACA,WAAA;CACA","file":"players.vue","sourcesContent":["<template>\r\n    <div class=\"gridlist-demo-container\">\r\n     <input style='margin-bootom:20px' v-model='search' placeholder =\"请随便输入点啥\" @focus='focus' @keyup=\"change(search)\" @blur='blur'/>\r\n      <mu-grid-list class=\"gridlist-demo\">\r\n        <div class='list' v-for=\"list in lists\" :key='list.id' v-show='bool'> \r\n          <mu-grid-tile style='width:150px' >\r\n              <a :href=\"'#/detail/'+list.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+list.id+'.png'\"/></a>\r\n                <span slot=\"title\">{{list.cname}}</span>\r\n                <span slot=\"subTitle\">by <b>{{list.title}}</b></span>\r\n                <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n          </mu-grid-tile>\r\n        </div>\r\n      </mu-grid-list>\r\n      <mu-grid-list class=\"gridlist-demo\" v-show='sort'>\r\n        <div class='list' > \r\n          <mu-grid-tile style='width:150px'>\r\n              <a :href=\"'#/detail/'+arrs.id\"><img id='images' :src=\"'http://cdn.tgp.qq.com/pallas/images/champions_id/'+arrs.id+'.png'\"/></a>\r\n                <span slot=\"title\">{{arrs.cname}}</span>\r\n                <span slot=\"subTitle\">by <b>{{arrs.title}}</b></span>\r\n                <mu-icon-button icon=\"star_border\" slot=\"action\"/>\r\n          </mu-grid-tile>\r\n        </div>\r\n      </mu-grid-list>\r\n\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n      export default {\r\n          data () {\r\n            return {\r\n              search:'',\r\n              lists: [],\r\n              dataSource: [],\r\n              bool:true,\r\n              sort:false,\r\n              arrs :{}\r\n              \r\n            }\r\n          },\r\n          methods:{\r\n            getchampion:function(){\r\n              this.$http.get('http://lolapi.games-cube.com/champion',{\r\n              \r\n                  headers:{\r\n                    \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                }\r\n                  \r\n              }).then(function(data){\r\n                 \r\n                  this.lists = data.data.data;\r\n              })\r\n            },\r\n            title:function(){\r\n              this.$store.commit('set_title',\"英雄列表\")\r\n\r\n                  \r\n            },\r\n            focus:function(){\r\n              this.bool = false;\r\n              this.sort = false\r\n             \r\n            \r\n            },\r\n            blur:function(){\r\n             this.bool = true;\r\n            },\r\n            change (val) {\r\n                \r\n                  var self = this;\r\n                  console.log(`you choose ${val}`)\r\n                   this.$http.get('http://lolapi.games-cube.com/champion',{\r\n                \r\n                    headers:{\r\n                      \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n                  }\r\n                   \r\n                }).then(function(data){\r\n                    // console.log(data.data.data)\r\n                    this.lists = data.data.data;\r\n                    this.lists.forEach(function(ele,item){\r\n                       \r\n                    if(val==ele.cname){\r\n                    \r\n                     self.arrs = ele;\r\n                      self.sort=true;\r\n                     \r\n\r\n                      }\r\n                    })\r\n                })\r\n            }\r\n          },\r\n\r\n          mounted:function(){\r\n            this.getchampion();\r\n            this.title();\r\n\r\n            \r\n       \r\n          }\r\n      }\r\n</script>\r\n\r\n<style>\r\n      .gridlist-demo-container{\r\n        padding:30px;\r\n        margin-top:56px;\r\n        display: flex;\r\n        flex-wrap: wrap;\r\n        justify-content:space-between;\r\n\r\n      }\r\n\r\n      .gridlist-demo{\r\n        width: 500px;\r\n        overflow-y: auto;\r\n      }\r\n      #images{\r\n        width:160px;\r\n      }\r\n      .list{\r\n        float:left;\r\n      }\r\n      \r\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -20606,7 +20606,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.tabbox img{\n  width:300px;\n  height:150px;\n}\n", "", {"version":3,"sources":["D:/lolpro/components/detail.vue?86e6916c"],"names":[],"mappings":";AA8EA;EACA,YAAA;EACA,aAAA;CACA","file":"detail.vue","sourcesContent":["<template>\r\n<div>\r\n    <mu-appbar :title=\"arrs.name\">\r\n        <mu-icon-button icon='menu' slot=\"left\"/>\r\n        <mu-icon-button icon='expand_more' slot=\"right\"/>\r\n     </mu-appbar>\r\n\r\n    <mu-card >\r\n        <mu-card-media :title=\"arrs.name\" >\r\n          <img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-000.jpg\"'/>\r\n        </mu-card-media>\r\n        <mu-tabs :value=\"activeTab\" @change=\"handleTabChange\">\r\n            <mu-tab value=\"tab1\" title=\"技能说明\"/>\r\n            <mu-tab value=\"tab2\" title=\"皮肤欣赏\"/>\r\n   \r\n        </mu-tabs>\r\n         <div  style='padding:20px'>\r\n             <div v-if=\"activeTab === 'tab1'\">\r\n                <h2>技能说明</h2>\r\n                <mu-list>\r\n                  <mu-avatar :src=\"'http://ossweb-img.qq.com/images/lol/img/passive/'+arrs.passive.image.full\" />\r\n                  <p>{{arrs.passive.name}}</p>\r\n                  <p>{{arrs.passive.description}}</p> \r\n                  \r\n               </mu-list>\r\n             </div>\r\n            <div class='tabbox' v-if=\"activeTab === 'tab2'\">\r\n                <h2>点击皮肤可观看视频哦</h2>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-001.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-002.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-003.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-004.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-005.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-006.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-007.jpg\"' /></p>\r\n            </div>  \r\n         </div>\r\n    </mu-card>\r\n    <xfooter></xfooter>\r\n</div>\r\n</template>\r\n\r\n<script>\r\nvar xfooter = require('./xfooter.vue')\r\nexport default {\r\n  data () {\r\n    return {\r\n       arrs:[],\r\n       activeTab: 'tab1'\r\n    }\r\n  },\r\n  components:{\r\n    xfooter:xfooter\r\n  },\r\n  methods:{\r\n    get_id:function(){\r\n      var id = this.$route.params.id;\r\n     \r\n      this.$http.get('http://lolapi.games-cube.com/GetChampionDetail?champion_id='+this.$route.params.id,{\r\n        headers: {\r\n          \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n        }\r\n      }).then(function(data){\r\n          console.log(data.data.data[0])\r\n          this.arrs = data.data.data[0]\r\n         \r\n      })\r\n    },\r\n     handleTabChange (val) {\r\n      this.activeTab = val\r\n    }\r\n  },\r\n  mounted:function(){\r\n    this.get_id();\r\n  }\r\n}\r\n</script>\r\n<style>\r\n    .tabbox img{\r\n      width:300px;\r\n      height:150px;\r\n    }\r\n</style>\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.tabbox img{\n  width:300px;\n  height:150px;\n}\n", "", {"version":3,"sources":["D:/lolpro/components/detail.vue?790b613d"],"names":[],"mappings":";AAmFA;EACA,YAAA;EACA,aAAA;CACA","file":"detail.vue","sourcesContent":["<template>\r\n<div>\r\n    <!-- <mu-appbar :title=\"arrs.name\">\r\n        <mu-icon-button icon='menu' slot=\"left\"/>\r\n        <mu-icon-button icon='expand_more' slot=\"right\"/>\r\n     </mu-appbar> -->\r\n\r\n    <mu-card >\r\n        <mu-card-media :title=\"arrs.name\" >\r\n          <img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-000.jpg\"'/>\r\n        </mu-card-media>\r\n        <mu-tabs :value=\"activeTab\" @change=\"handleTabChange\">\r\n            <mu-tab value=\"tab1\" title=\"技能说明\"/>\r\n            <mu-tab value=\"tab2\" title=\"皮肤欣赏\"/>\r\n   \r\n        </mu-tabs>\r\n         <div  style='padding:20px'>\r\n             <div v-if=\"activeTab === 'tab1'\">\r\n                <h2>技能说明</h2>\r\n                <mu-list>\r\n                  <mu-avatar :src=\"'http://ossweb-img.qq.com/images/lol/img/passive/'+arrs.passive.image.full\" />\r\n                  <p>{{arrs.passive.name}}</p>\r\n                  <p>{{arrs.passive.description}}</p> \r\n                  \r\n               </mu-list>\r\n             </div>\r\n            <div class='tabbox' v-if=\"activeTab === 'tab2'\">\r\n                <h2>点击皮肤可观看视频哦</h2>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-001.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-002.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-003.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-004.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-005.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-006.jpg\"' /></p>\r\n                <p><img :src='\"http://cdn.tgp.qq.com/pallas/images/skins/original/\"+arrs.key+\"-007.jpg\"' /></p>\r\n            </div>  \r\n         </div>\r\n    </mu-card>\r\n    <xfooter></xfooter>\r\n</div>\r\n</template>\r\n\r\n<script>\r\nvar xfooter = require('./xfooter.vue')\r\nexport default {\r\n  data () {\r\n    return {\r\n       arrs:[],\r\n       activeTab: 'tab1'\r\n    }\r\n  },\r\n  components:{\r\n    xfooter:xfooter\r\n  },\r\n  methods:{\r\n    get_id:function(){\r\n      var id = this.$route.params.id;\r\n     \r\n      this.$http.get('http://lolapi.games-cube.com/GetChampionDetail?champion_id='+this.$route.params.id,{\r\n        headers: {\r\n          \"DAIWAN-API-TOKEN\":\"78710-B0810-777C7-C9A85\"\r\n        }\r\n      }).then(function(data){\r\n          console.log(data.data.data[0])\r\n          this.arrs = data.data.data[0]\r\n          this.title( this.arrs.name);\r\n         \r\n      })\r\n    },\r\n     handleTabChange (val) {\r\n      this.activeTab = val\r\n    },\r\n    title:function(a){\r\n      this.$store.commit('set_title',a);\r\n    }\r\n  },\r\n  mounted:function(){\r\n    this.get_id();\r\n\r\n  }\r\n}\r\n</script>\r\n<style>\r\n    .tabbox img{\r\n      width:300px;\r\n      height:150px;\r\n    }\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -20620,7 +20620,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.demo-infinite-container[data-v-f77fec4a]{\r\n  width:100%;\r\n margin-top:56px;\r\n  overflow: auto;\r\n  -webkit-overflow-scrolling: touch;\n}\r\n", "", {"version":3,"sources":["D:/lolpro/components/channels/search.vue?1c9b6730"],"names":[],"mappings":";AA4DA;EACA,WAAA;CACA,gBAAA;EACA,eAAA;EACA,kCAAA;CAEA","file":"search.vue","sourcesContent":["<template>  \r\n    <div class=\"demo-infinite-container\" :style=\"{height:listheight-306+'px'}\">\r\n      <mu-list >\r\n            <a :href=\"'http://qt.qq.com/php_cgi/news/php/varcache_article.php?id='+arr.article_id+'&version=$PROTO_VERSION$'\" v-for='arr in arrs' :key='arr.id' >\r\n              <mu-list-item :title=\"arr.title\" >\r\n                <mu-avatar :src=\"arr.image_url_small\" slot=\"leftAvatar\"/>\r\n                <span slot=\"describe\">\r\n                  <span style=\"color: rgba(0, 0, 0, .87)\">{{arr.club_name}}</span>\r\n                  {{arr.summary}} \r\n                </span>\r\n                <mu-icon-menu slot=\"right\" icon=\"more_vert\" tooltip=\"操作\">\r\n                  <mu-menu-item title=\"回复\" />\r\n                  <mu-menu-item title=\"标记\" />\r\n                  <mu-menu-item title=\"删除\" />\r\n                </mu-icon-menu>\r\n              </mu-list-item>\r\n            </a>\r\n           <mu-infinite-scroll :scroller=\"scroller\" :loading=\"loading\" @load=\"getlist()\"/>\r\n     </mu-list>\r\n     \r\n    </div>\r\n</template>\r\n<script>\r\n\r\nexport default {\r\n  data () {\r\n    return {\r\n      arrs:[],\r\n      loading: false,\r\n      scroller: null,\r\n      listheight:''\r\n      //,bool:true\r\n      \r\n    }\r\n  },\r\n  methods:{\r\n      getlist:function(){\r\n          this.loading=true;\r\n         this.$http.jsonp('http://1.guoguoniu.applinzi.com/php/list.php',{\r\n          params:{\r\n            callback:'JSON_CALLBACK'\r\n          }\r\n        }).then(function(data){\r\n          \r\n          this.arrs = this.arrs.concat(data.data.list);\r\n          this.loading = false;\r\n          \r\n           \r\n        })\r\n      }\r\n  },\r\n  mounted:function(){\r\n    this.getlist();\r\n    this.scroller = this.$el\r\n   \r\n    \r\n  }\r\n}\r\n</script>\r\n<style scoped >\r\n.demo-infinite-container{\r\n  width:100%;\r\n margin-top:56px;\r\n  overflow: auto;\r\n  -webkit-overflow-scrolling: touch;\r\n  \r\n}\r\n</style>\r\n\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.demo-infinite-container[data-v-f77fec4a]{\r\n  width:100%;\r\n margin-top:56px;\r\n  overflow: auto;\r\n  -webkit-overflow-scrolling: touch;\n}\r\n", "", {"version":3,"sources":["D:/lolpro/components/channels/search.vue?aa01dc0c"],"names":[],"mappings":";AAgEA;EACA,WAAA;CACA,gBAAA;EACA,eAAA;EACA,kCAAA;CAEA","file":"search.vue","sourcesContent":["<template>  \r\n    <div class=\"demo-infinite-container\" :style=\"{height:listheight-306+'px'}\">\r\n      <mu-list >\r\n            <a :href=\"'http://qt.qq.com/php_cgi/news/php/varcache_article.php?id='+arr.article_id+'&version=$PROTO_VERSION$'\" v-for='arr in arrs' :key='arr.id' >\r\n              <mu-list-item :title=\"arr.title\" >\r\n                <mu-avatar :src=\"arr.image_url_small\" slot=\"leftAvatar\"/>\r\n                <span slot=\"describe\">\r\n                  <span style=\"color: rgba(0, 0, 0, .87)\">{{arr.club_name}}</span>\r\n                  {{arr.summary}} \r\n                </span>\r\n                <mu-icon-menu slot=\"right\" icon=\"more_vert\" tooltip=\"操作\">\r\n                  <mu-menu-item title=\"回复\" />\r\n                  <mu-menu-item title=\"标记\" />\r\n                  <mu-menu-item title=\"删除\" />\r\n                </mu-icon-menu>\r\n              </mu-list-item>\r\n            </a>\r\n           <mu-infinite-scroll :scroller=\"scroller\" :loading=\"loading\" @load=\"getlist()\"/>\r\n     </mu-list>\r\n     \r\n    </div>\r\n</template>\r\n<script>\r\n\r\nexport default {\r\n  data () {\r\n    return {\r\n      arrs:[],\r\n      loading: false,\r\n      scroller: null,\r\n      listheight:''\r\n      //,bool:true\r\n      \r\n    }\r\n  },\r\n  methods:{\r\n      getlist:function(){\r\n          this.loading=true;\r\n         this.$http.jsonp('http://1.guoguoniu.applinzi.com/php/list.php',{\r\n          params:{\r\n            callback:'JSON_CALLBACK'\r\n          }\r\n        }).then(function(data){\r\n          \r\n          this.arrs = this.arrs.concat(data.data.list);\r\n          this.loading = false;\r\n          \r\n           \r\n        })\r\n      },\r\n      title:function(){\r\n        this.$store.commit('set_title','评论社区')\r\n      }\r\n  },\r\n  mounted:function(){\r\n    this.getlist();\r\n    this.scroller = this.$el;\r\n    this.title();\r\n   \r\n    \r\n  }\r\n}\r\n</script>\r\n<style scoped >\r\n.demo-infinite-container{\r\n  width:100%;\r\n margin-top:56px;\r\n  overflow: auto;\r\n  -webkit-overflow-scrolling: touch;\r\n  \r\n}\r\n</style>\r\n\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -20853,13 +20853,13 @@ function fromByteArray (uint8) {
 
 
 /* styles */
-__webpack_require__(67)
+__webpack_require__(68)
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(45),
+  __webpack_require__(46),
   /* template */
-  __webpack_require__(58),
+  __webpack_require__(59),
   /* scopeId */
   null,
   /* cssModules */
@@ -20891,9 +20891,9 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(47),
+  __webpack_require__(48),
   /* template */
-  __webpack_require__(55),
+  __webpack_require__(56),
   /* scopeId */
   null,
   /* cssModules */
@@ -20925,13 +20925,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(69)
+__webpack_require__(70)
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(48),
+  __webpack_require__(49),
   /* template */
-  __webpack_require__(60),
+  __webpack_require__(61),
   /* scopeId */
   null,
   /* cssModules */
@@ -20963,13 +20963,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(68)
+__webpack_require__(69)
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(49),
+  __webpack_require__(50),
   /* template */
-  __webpack_require__(59),
+  __webpack_require__(60),
   /* scopeId */
   null,
   /* cssModules */
@@ -21001,9 +21001,9 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(50),
+  __webpack_require__(51),
   /* template */
-  __webpack_require__(52),
+  __webpack_require__(53),
   /* scopeId */
   null,
   /* cssModules */
@@ -21035,9 +21035,9 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(51),
+  __webpack_require__(52),
   /* template */
-  __webpack_require__(57),
+  __webpack_require__(58),
   /* scopeId */
   null,
   /* cssModules */
@@ -21084,10 +21084,14 @@ module.exports = {
 	methods:{
 		contents:function(){
 			console.log(window.screen.availHeight)
+		},
+		title:function(){
+			this.$store.commit('set_title','新闻列表')
 		}
 	},
 	mounted:function(){
 		this.contents();
+		this.title();
 	}
 }
 
@@ -21112,11 +21116,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = {
     data () {
       return {
-        lists: []
+        search:'',
+        lists: [],
+        dataSource: [],
+        bool:true,
+        sort:false,
+        arrs :{}
+        
       }
     },
     methods:{
@@ -21128,13 +21152,57 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           }
             
         }).then(function(data){
-            console.log(data.data.data)
+           
             this.lists = data.data.data;
         })
+      },
+      title:function(){
+        this.$store.commit('set_title',"英雄列表")
+
+            
+      },
+      focus:function(){
+        this.bool = false;
+        this.sort = false
+       
+      
+      },
+      blur:function(){
+       this.bool = true;
+      },
+      change (val) {
+          
+            var self = this;
+            console.log(`you choose ${val}`)
+             this.$http.get('http://lolapi.games-cube.com/champion',{
+          
+              headers:{
+                "DAIWAN-API-TOKEN":"78710-B0810-777C7-C9A85"
+            }
+             
+          }).then(function(data){
+              // console.log(data.data.data)
+              this.lists = data.data.data;
+              this.lists.forEach(function(ele,item){
+                 
+              if(val==ele.cname){
+              
+               self.arrs = ele;
+                self.sort=true;
+               
+
+                }
+              })
+          })
       }
     },
+
     mounted:function(){
       this.getchampion();
+      this.title();
+
+      
+ 
     }
 };
 
@@ -21194,11 +21262,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           
            
         })
+      },
+      title:function(){
+        this.$store.commit('set_title','评论社区')
       }
   },
   mounted:function(){
     this.getlist();
-    this.scroller = this.$el
+    this.scroller = this.$el;
+    this.title();
    
     
   }
@@ -21207,6 +21279,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 43 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+  methods:{
+    title:function(){
+      this.$store.commit('set_title','视频锦集');
+    }
+  },
+  mounted:function(){
+    this.title();
+  }
+}
+
+
+/***/ }),
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21276,21 +21384,26 @@ var xfooter = __webpack_require__(6)
       }).then(function(data){
           console.log(data.data.data[0])
           this.arrs = data.data.data[0]
+          this.title( this.arrs.name);
          
       })
     },
      handleTabChange (val) {
       this.activeTab = val
+    },
+    title:function(a){
+      this.$store.commit('set_title',a);
     }
   },
   mounted:function(){
     this.get_id();
+
   }
 };
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //
@@ -21317,7 +21430,7 @@ module.exports = {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21397,7 +21510,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21450,9 +21563,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
+//
 //
 //
 //
@@ -21466,17 +21580,25 @@ module.exports = {
 			this.$store.commit('set_open',true);
 			console.log(1)
 			console.log(this.$store.state.isleftPopup)
-
+			console.log(this.$store)
 		},
 		close:function(){
+			//向store仓库发送设置
 			this.$store.commit('set_close',true);
+		}
+	},
+	//自动执行
+	computed:{
+		title:function(){
+			//自动执行修改的命令
+			return this.$store.state.title
 		}
 	}
 }
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21559,7 +21681,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21620,7 +21742,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21661,7 +21783,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21725,7 +21847,7 @@ if (browser) {
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -21742,7 +21864,7 @@ if (false) {
 }
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -21798,7 +21920,7 @@ if (false) {
 }
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -21813,7 +21935,7 @@ if (false) {
 }
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -21822,9 +21944,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "position": "fixed",
       "top": "0px",
       "width": "100%"
-    },
-    attrs: {
-      "title": "顶部菜单"
     }
   }, [_c('mu-icon-button', {
     attrs: {
@@ -21846,7 +21965,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     },
     slot: "right"
-  })], 1)
+  }), _vm._v("\r\n  " + _vm._s(_vm.title) + "\r\n")], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -21857,17 +21976,55 @@ if (false) {
 }
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "gridlist-demo-container"
-  }, [_c('mu-grid-list', {
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.search),
+      expression: "search"
+    }],
+    staticStyle: {
+      "margin-bootom": "20px"
+    },
+    attrs: {
+      "placeholder": "请随便输入点啥"
+    },
+    domProps: {
+      "value": (_vm.search)
+    },
+    on: {
+      "focus": _vm.focus,
+      "keyup": function($event) {
+        _vm.change(_vm.search)
+      },
+      "blur": _vm.blur,
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.search = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('mu-grid-list', {
     staticClass: "gridlist-demo"
   }, _vm._l((_vm.lists), function(list) {
-    return _c('mu-grid-tile', {
-      key: list.id
+    return _c('div', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (_vm.bool),
+        expression: "bool"
+      }],
+      key: list.id,
+      staticClass: "list"
+    }, [_c('mu-grid-tile', {
+      staticStyle: {
+        "width": "150px"
+      }
     }, [_c('a', {
       attrs: {
         "href": '#/detail/' + list.id
@@ -21886,8 +22043,40 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "icon": "star_border"
       },
       slot: "action"
-    })], 1)
-  }))], 1)
+    })], 1)], 1)
+  })), _vm._v(" "), _c('mu-grid-list', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.sort),
+      expression: "sort"
+    }],
+    staticClass: "gridlist-demo"
+  }, [_c('div', {
+    staticClass: "list"
+  }, [_c('mu-grid-tile', {
+    staticStyle: {
+      "width": "150px"
+    }
+  }, [_c('a', {
+    attrs: {
+      "href": '#/detail/' + _vm.arrs.id
+    }
+  }, [_c('img', {
+    attrs: {
+      "id": "images",
+      "src": 'http://cdn.tgp.qq.com/pallas/images/champions_id/' + _vm.arrs.id + '.png'
+    }
+  })]), _vm._v(" "), _c('span', {
+    slot: "title"
+  }, [_vm._v(_vm._s(_vm.arrs.cname))]), _vm._v(" "), _c('span', {
+    slot: "subTitle"
+  }, [_vm._v("by "), _c('b', [_vm._v(_vm._s(_vm.arrs.title))])]), _vm._v(" "), _c('mu-icon-button', {
+    attrs: {
+      "icon": "star_border"
+    },
+    slot: "action"
+  })], 1)], 1)])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -21898,7 +22087,7 @@ if (false) {
 }
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -21917,7 +22106,7 @@ if (false) {
 }
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22009,7 +22198,7 @@ if (false) {
 }
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22055,7 +22244,7 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22125,7 +22314,7 @@ if (false) {
 }
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22140,7 +22329,7 @@ if (false) {
 }
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22171,25 +22360,11 @@ if (false) {
 }
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('mu-appbar', {
-    attrs: {
-      "title": _vm.arrs.name
-    }
-  }, [_c('mu-icon-button', {
-    attrs: {
-      "icon": "menu"
-    },
-    slot: "left"
-  }), _vm._v(" "), _c('mu-icon-button', {
-    attrs: {
-      "icon": "expand_more"
-    },
-    slot: "right"
-  })], 1), _vm._v(" "), _c('mu-card', [_c('mu-card-media', {
+  return _c('div', [_c('mu-card', [_c('mu-card-media', {
     attrs: {
       "title": _vm.arrs.name
     }
@@ -22263,7 +22438,7 @@ if (false) {
 }
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22333,7 +22508,7 @@ if (false) {
 }
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22359,7 +22534,7 @@ if(false) {
 }
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22385,7 +22560,7 @@ if(false) {
 }
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22411,7 +22586,7 @@ if(false) {
 }
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22437,7 +22612,7 @@ if(false) {
 }
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22463,7 +22638,7 @@ if(false) {
 }
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22489,7 +22664,7 @@ if(false) {
 }
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -22515,7 +22690,7 @@ if(false) {
 }
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports) {
 
 /**
@@ -22548,7 +22723,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24345,13 +24520,13 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24370,10 +24545,9 @@ var Vue = __webpack_require__(3);
 
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_muse_ui___default.a)
-
+//vue 跨域$http
 var VueResource = __webpack_require__(10);
 Vue.use(VueResource);
-
 
 //引入swiper插件
 
@@ -24386,16 +24560,26 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */])
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_4_vuex__["a" /* default */]);
 var store = new __WEBPACK_IMPORTED_MODULE_4_vuex__["a" /* default */].Store({
+    //保存
     state: {
         isbottomPopup: false,
-        isleftPopup: false
+        isleftPopup: false,
+        title:'',
+        bool:true
     },
+    //设置 通过mutations设置的值来改变state
     mutations: {
         set_open: function(state, data) {
             state.isleftPopup = data
         },
         set_close: function(state, data) {
             state.isbottomPopup = data
+        },
+        set_title:function(state,data){
+            state.title = data
+        },
+        set_show:function(state,data){
+            state.bool =  data;
         }
     }
 

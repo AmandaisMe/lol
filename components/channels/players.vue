@@ -1,6 +1,6 @@
 <template>
     <div class="gridlist-demo-container">
-     <input style='margin-bootom:20px' v-model='search' placeholder ="请随便输入点啥" @focus='focus' @keyup="change(search)" @blur='blur'/>
+     <input style='margin-bottom:20px' v-model='search' placeholder ="请随便输入点啥" @focus='focus' @keyup="change(search)" @blur='blur'/>
       <mu-grid-list class="gridlist-demo">
         <div class='list' v-for="list in lists" :key='list.id' v-show='bool'> 
           <mu-grid-tile style='width:150px' >
