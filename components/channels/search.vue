@@ -47,11 +47,15 @@ export default {
           
            
         })
+      },
+      title:function(){
+        this.$store.commit('set_title','评论社区')
       }
   },
   mounted:function(){
     this.getlist();
-    this.scroller = this.$el
+    this.scroller = this.$el;
+    this.title();
    
     
   }
